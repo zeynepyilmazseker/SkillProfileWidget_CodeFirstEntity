@@ -1,0 +1,27 @@
+﻿@model SkillProfileWidget_CodeFirstEntity.Models.siniflar.Skill
+@{
+    ViewBag.Title = "YetenekGetir";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+
+<h2>Yetenek Güncelleme Sayfası</h2>
+@using (Html.BeginForm("Guncelle", "Admin", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.id, "Yetenek id:")
+        @Html.TextBoxFor(m => m.id, new { @class = "form-control" })
+        
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Aciklama, "Yetenek Açıklaması:")
+        @Html.TextBoxFor(m => m.Aciklama, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Deger, "Değer:")
+        @Html.TextBoxFor(m => m.Deger, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-success">Kategori Güncelle</button>
+    </div>
+}
+
